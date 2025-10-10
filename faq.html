@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Najczęściej Zadawane Pytania | CyberAkademia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                🛡️ CyberAkademia
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="password.html">Gra Hasło</a></li>
+                    <li><a href="achievements.html">Osiągnięcia</a></li>
+                    <li><a href="stats.html">Statystyki</a></li>
+                    <li><a href="faq.html" class="active">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">❓ Najczęściej Zadawane Pytania</h1>
+                <p class="page-subtitle">
+                    Odpowiedzi na najważniejsze pytania dotyczące cyberbezpieczeństwa i cyberprzemocy
+                </p>
+            </div>
+
+            <!-- Search Section -->
+            <div class="faq-search-section">
+                <div class="search-container">
+                    <input type="text" id="faqSearch" placeholder="🔍 Szukaj w FAQ..." class="faq-search-input">
+                    <button class="search-btn" onclick="searchFAQ()">Szukaj</button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+
+            <!-- FAQ Categories -->
+            <div class="faq-categories">
+                <button class="category-btn active" data-category="all">Wszystkie</button>
+                <button class="category-btn" data-category="security">Cyberbezpieczeństwo</button>
+                <button class="category-btn" data-category="cyberbullying">Cyberprzemoc</button>
+                <button class="category-btn" data-category="passwords">Hasła</button>
+                <button class="category-btn" data-category="privacy">Prywatność</button>
+                <button class="category-btn" data-category="general">Ogólne</button>
+            </div>
+
+            <!-- FAQ Accordion -->
+            <div class="faq-container">
+                
+                <!-- Cyberbezpieczeństwo -->
+                <div class="faq-section" data-category="security">
+                    <h2 class="faq-section-title">🛡️ Cyberbezpieczeństwo</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co to jest phishing i jak się przed nim chronić?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Phishing</strong> to metoda oszustwa polegająca na podszywaniu się pod zaufane instytucje (banki, urzędy, firmy) w celu wyłudzenia danych osobowych, haseł lub pieniędzy.</p>
+                            <h4>Jak się chronić:</h4>
+                            <ul>
+                                <li>✅ Sprawdzaj adres nadawcy emaila</li>
+                                <li>✅ Nie klikaj w podejrzane linki</li>
+                                <li>✅ Weryfikuj wiadomości przez oficjalne kanały</li>
+                                <li>✅ Używaj dwuskładnikowej autoryzacji (2FA)</li>
+                                <li>✅ Aktualizuj oprogramowanie antywirusowe</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co to jest ransomware i jak działa?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Ransomware</strong> to złośliwe oprogramowanie, które szyfruje pliki na komputerze i żąda okupu za ich odszyfrowanie.</p>
+                            <h4>Jak się chronić:</h4>
+                            <ul>
+                                <li>🔄 Regularnie rób kopie zapasowe danych</li>
+                                <li>🛡️ Używaj aktualnego oprogramowania antywirusowego</li>
+                                <li>📧 Nie otwieraj podejrzanych załączników</li>
+                                <li>🔗 Nie klikaj w nieznane linki</li>
+                                <li>💾 Przechowuj kopie zapasowe offline</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co to jest firewall i dlaczego jest ważny?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Firewall</strong> to system zabezpieczający, który kontroluje ruch sieciowy i blokuje nieautoryzowany dostęp do komputera lub sieci.</p>
+                            <h4>Korzyści:</h4>
+                            <ul>
+                                <li>🚫 Blokuje niechciane połączenia</li>
+                                <li>🔒 Chroni przed atakami zewnętrznymi</li>
+                                <li>📊 Monitoruje ruch sieciowy</li>
+                                <li>⚙️ Pozwala na konfigurację reguł bezpieczeństwa</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co to jest VPN i kiedy go używać?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>VPN (Virtual Private Network)</strong> to wirtualna prywatna sieć, która maskuje twoją lokalizację i szyfruje połączenie internetowe.</p>
+                            <h4>Kiedy używać VPN:</h4>
+                            <ul>
+                                <li>🌐 Korzystając z publicznych sieci WiFi</li>
+                                <li>🔒 Chcąc ukryć swoją lokalizację</li>
+                                <li>📱 Dostępując do treści z ograniczeniami geograficznymi</li>
+                                <li>💼 Pracując zdalnie z poufnymi danymi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cyberprzemoc -->
+                <div class="faq-section" data-category="cyberbullying">
+                    <h2 class="faq-section-title">🚫 Cyberprzemoc</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co to jest cyberprzemoc?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Cyberprzemoc</strong> to przemoc z użyciem technologii informacyjnych i komunikacyjnych, taka jak internet, telefony komórkowe czy media społecznościowe.</p>
+                            <h4>Formy cyberprzemocy:</h4>
+                            <ul>
+                                <li>💬 Nękanie przez wiadomości</li>
+                                <li>📸 Udostępnianie kompromitujących zdjęć</li>
+                                <li>🌐 Tworzenie fałszywych profili</li>
+                                <li>📱 Rozpowszechnianie plotek online</li>
+                                <li>🎯 Wykluczanie z grup społecznościowych</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Jak rozpoznać, że jestem ofiarą cyberprzemocy?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Oznaki, że możesz być ofiarą cyberprzemocy:</p>
+                            <h4>Objawy emocjonalne:</h4>
+                            <ul>
+                                <li>😰 Lęk przed korzystaniem z internetu</li>
+                                <li>😢 Smutek, depresja</li>
+                                <li>😡 Złość, frustracja</li>
+                                <li>😴 Problemy ze snem</li>
+                                <li>📉 Spadek samooceny</li>
+                            </ul>
+                            <h4>Objawy behawioralne:</h4>
+                            <ul>
+                                <li>🚫 Unikanie szkoły/pracy</li>
+                                <li>📱 Zmiana w korzystaniu z urządzeń</li>
+                                <li>👥 Wycofanie się z kontaktów społecznych</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co robić, gdy jestem świadkiem cyberprzemocy?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Jako świadek cyberprzemocy masz ważną rolę w jej zatrzymaniu:</p>
+                            <h4>Kroki do podjęcia:</h4>
+                            <ul>
+                                <li>🤝 Wesprzyj ofiarę - pokaż, że nie jest sama</li>
+                                <li>🚫 Nie udostępniaj ani nie lajkuj szkodliwych treści</li>
+                                <li>📞 Zgłoś incydent odpowiednim osobom</li>
+                                <li>💬 Przerwij milczenie - powiedz sprawcy, że to nie jest w porządku</li>
+                                <li>📚 Edukuj innych o cyberprzemocy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Gdzie szukać pomocy w przypadku cyberprzemocy?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>W przypadku cyberprzemocy nie musisz radzić sobie sam:</p>
+                            <h4>Miejsca pomocy:</h4>
+                            <ul>
+                                <li>👨‍👩‍👧‍👦 Rodzina i przyjaciele</li>
+                                <li>🏫 Szkoła - pedagog, psycholog</li>
+                                <li>👮‍♂️ Policja - w przypadku poważnych przestępstw</li>
+                                <li>📞 Telefon Zaufania dla Dzieci i Młodzieży: 116 111</li>
+                                <li>🌐 Fundacja Dajemy Dzieciom Siłę</li>
+                                <li>💻 Platformy internetowe - funkcje zgłaszania</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hasła -->
+                <div class="faq-section" data-category="passwords">
+                    <h2 class="faq-section-title">🔐 Hasła i Uwierzytelnianie</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Jak stworzyć silne hasło?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Silne hasło to podstawa bezpieczeństwa online:</p>
+                            <h4>Zasady tworzenia silnego hasła:</h4>
+                            <ul>
+                                <li>📏 Minimum 12 znaków</li>
+                                <li>🔤 Używaj wielkich i małych liter</li>
+                                <li>🔢 Dodaj cyfry</li>
+                                <li>🔣 Używaj znaków specjalnych (!@#$%^&*)</li>
+                                <li>❌ Unikaj oczywistych słów i dat</li>
+                                <li>🔄 Używaj unikalnych haseł dla każdego konta</li>
+                            </ul>
+                            <h4>Przykład silnego hasła:</h4>
+                            <p><code>MyD0g@Loves#Swimming!</code></p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co to jest menedżer haseł?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Menedżer haseł</strong> to program, który bezpiecznie przechowuje i zarządza wszystkimi twoimi hasłami.</p>
+                            <h4>Korzyści:</h4>
+                            <ul>
+                                <li>🔒 Bezpieczne przechowywanie haseł</li>
+                                <li>🔄 Automatyczne generowanie silnych haseł</li>
+                                <li>⚡ Automatyczne logowanie</li>
+                                <li>📱 Synchronizacja między urządzeniami</li>
+                                <li>🔍 Sprawdzanie wycieków haseł</li>
+                            </ul>
+                            <h4>Popularne menedżery:</h4>
+                            <ul>
+                                <li>1Password</li>
+                                <li>LastPass</li>
+                                <li>Bitwarden</li>
+                                <li>Dashlane</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co to jest dwuskładnikowa autoryzacja (2FA)?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>2FA (Two-Factor Authentication)</strong> to dodatkowa warstwa bezpieczeństwa wymagająca dwóch form weryfikacji tożsamości.</p>
+                            <h4>Typy 2FA:</h4>
+                            <ul>
+                                <li>📱 SMS z kodem</li>
+                                <li>📧 Email z kodem</li>
+                                <li>🔐 Aplikacje autoryzacyjne (Google Authenticator, Authy)</li>
+                                <li>🔑 Klucze sprzętowe (YubiKey)</li>
+                                <li>👆 Biometria (odcisk palca, rozpoznawanie twarzy)</li>
+                            </ul>
+                            <h4>Dlaczego warto używać 2FA:</h4>
+                            <ul>
+                                <li>🛡️ Dodatkowa ochrona przed włamaniami</li>
+                                <li>🔒 Nawet jeśli hasło zostanie skradzione, konto pozostaje bezpieczne</li>
+                                <li>📊 Większość platform oferuje 2FA za darmo</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prywatność -->
+                <div class="faq-section" data-category="privacy">
+                    <h2 class="faq-section-title">🔒 Prywatność i Dane Osobowe</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Jak chronić swoją prywatność w internecie?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Ochrona prywatności online wymaga świadomych działań:</p>
+                            <h4>Podstawowe zasady:</h4>
+                            <ul>
+                                <li>🔍 Sprawdzaj ustawienia prywatności w mediach społecznościowych</li>
+                                <li>📱 Ograniczaj udostępnianie lokalizacji</li>
+                                <li>🍪 Zarządzaj plikami cookies</li>
+                                <li>🔒 Używaj szyfrowanych komunikatorów</li>
+                                <li>📧 Nie udostępniaj danych osobowych w emailach</li>
+                                <li>🌐 Korzystaj z trybu incognito/private</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co to są pliki cookies i jak je kontrolować?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Cookies</strong> to małe pliki tekstowe przechowywane na twoim urządzeniu przez strony internetowe.</p>
+                            <h4>Typy cookies:</h4>
+                            <ul>
+                                <li>🍪 <strong>Niezbędne</strong> - wymagane do działania strony</li>
+                                <li>📊 <strong>Analityczne</strong> - zbierają dane o korzystaniu ze strony</li>
+                                <li>🎯 <strong>Marketingowe</strong> - używane do personalizacji reklam</li>
+                                <li>⚙️ <strong>Funkcjonalne</strong> - zapamiętują twoje preferencje</li>
+                            </ul>
+                            <h4>Jak kontrolować cookies:</h4>
+                            <ul>
+                                <li>⚙️ Ustawienia przeglądarki</li>
+                                <li>🚫 Blokowanie cookies stron trzecich</li>
+                                <li>🗑️ Regularne czyszczenie cookies</li>
+                                <li>🔒 Używanie trybu prywatnego</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Jak bezpiecznie korzystać z mediów społecznościowych?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Media społecznościowe mogą być bezpieczne, jeśli odpowiednio z nich korzystasz:</p>
+                            <h4>Zasady bezpieczeństwa:</h4>
+                            <ul>
+                                <li>🔒 Ustaw prywatny profil</li>
+                                <li>👥 Akceptuj zaproszenia tylko od znajomych</li>
+                                <li>📸 Nie udostępniaj zbyt wielu zdjęć prywatnych</li>
+                                <li>📍 Wyłącz udostępnianie lokalizacji</li>
+                                <li>🔍 Regularnie sprawdzaj ustawienia prywatności</li>
+                                <li>🚫 Nie udostępniaj danych osobowych</li>
+                                <li>⏰ Ograniczaj czas spędzany w mediach społecznościowych</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ogólne -->
+                <div class="faq-section" data-category="general">
+                    <h2 class="faq-section-title">❓ Ogólne Pytania</h2>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Jak często powinienem aktualizować oprogramowanie?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Regularne aktualizacje to klucz do bezpieczeństwa:</p>
+                            <h4>Harmonogram aktualizacji:</h4>
+                            <ul>
+                                <li>🖥️ <strong>System operacyjny</strong> - natychmiast po dostępności</li>
+                                <li>🌐 <strong>Przeglądarka</strong> - automatycznie lub co tydzień</li>
+                                <li>🛡️ <strong>Antywirus</strong> - codziennie</li>
+                                <li>📱 <strong>Aplikacje</strong> - co tydzień</li>
+                                <li>🔌 <strong>Sterowniki</strong> - co miesiąc</li>
+                            </ul>
+                            <h4>Dlaczego aktualizacje są ważne:</h4>
+                            <ul>
+                                <li>🔒 Łatają luki bezpieczeństwa</li>
+                                <li>⚡ Poprawiają wydajność</li>
+                                <li>🆕 Dodają nowe funkcje</li>
+                                <li>🐛 Naprawiają błędy</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Jak rozpoznać fałszywą stronę internetową?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Fałszywe strony (phishing) mogą wyglądać bardzo podobnie do prawdziwych:</p>
+                            <h4>Znaki ostrzegawcze:</h4>
+                            <ul>
+                                <li>🔗 Podejrzany adres URL</li>
+                                <li>🔒 Brak kłódki HTTPS</li>
+                                <li>📧 Błędy językowe i ortograficzne</li>
+                                <li>⏰ Presja czasowa w wiadomościach</li>
+                                <li>💰 Prośby o dane finansowe</li>
+                                <li>📱 Nieprawidłowe certyfikaty SSL</li>
+                            </ul>
+                            <h4>Jak się chronić:</h4>
+                            <ul>
+                                <li>🔍 Zawsze sprawdzaj adres URL</li>
+                                <li>🔒 Szukaj kłódki HTTPS</li>
+                                <li>📞 Weryfikuj przez oficjalne kanały</li>
+                                <li>🚫 Nie klikaj w podejrzane linki</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Co robić w przypadku wycieku danych?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Wyciek danych to poważna sytuacja wymagająca natychmiastowych działań:</p>
+                            <h4>Kroki do podjęcia:</h4>
+                            <ul>
+                                <li>🔒 <strong>Natychmiast zmień hasła</strong> - wszystkich kont</li>
+                                <li>📧 <strong>Sprawdź konta email</strong> - czy nie ma podejrzanej aktywności</li>
+                                <li>💳 <strong>Monitoruj karty płatnicze</strong> - sprawdzaj transakcje</li>
+                                <li>🛡️ <strong>Włącz 2FA</strong> - wszędzie gdzie to możliwe</li>
+                                <li>📞 <strong>Skontaktuj się z bankiem</strong> - jeśli dotyczy to danych finansowych</li>
+                                <li>🚨 <strong>Zgłoś incydent</strong> - odpowiednim organom</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Jak bezpiecznie korzystać z publicznych sieci WiFi?</h3>
+                            <span class="faq-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Publiczne sieci WiFi mogą być niebezpieczne, ale można z nich bezpiecznie korzystać:</p>
+                            <h4>Zasady bezpieczeństwa:</h4>
+                            <ul>
+                                <li>🔒 <strong>Używaj VPN</strong> - szyfruje połączenie</li>
+                                <li>🌐 <strong>Unikaj wrażliwych operacji</strong> - bankowość, zakupy</li>
+                                <li>🔍 <strong>Sprawdź nazwę sieci</strong> - upewnij się, że to oficjalna sieć</li>
+                                <li>📱 <strong>Wyłącz udostępnianie plików</strong></li>
+                                <li>🚫 <strong>Nie loguj się do kont</strong> - jeśli nie jest to konieczne</li>
+                                <li>🔄 <strong>Włącz firewall</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>🛡️ CyberAkademia</h3>
+            <p>Edukacja cyberbezpieczeństwa dla każdego</p>
+            <p>© 2025 CyberAkademia. Wszystkie prawa zastrzeżone</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            initFAQ();
+        });
+
+        function initFAQ() {
+            // Initialize FAQ accordion
+            initFAQAccordion();
+            
+            // Initialize category filtering
+            initCategoryFiltering();
+            
+            // Initialize search functionality
+            initFAQSearch();
+        }
+
+        function initFAQAccordion() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.faq-icon');
+                
+                question.addEventListener('click', () => {
+                    const isOpen = answer.style.display === 'block';
+                    
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.faq-answer').style.display = 'none';
+                            otherItem.querySelector('.faq-icon').textContent = '+';
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    if (isOpen) {
+                        answer.style.display = 'none';
+                        icon.textContent = '+';
+                        item.classList.remove('active');
+                    } else {
+                        answer.style.display = 'block';
+                        icon.textContent = '−';
+                        item.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        function initCategoryFiltering() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const faqSections = document.querySelectorAll('.faq-section');
+            
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const category = btn.dataset.category;
+                    
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Show/hide sections
+                    faqSections.forEach(section => {
+                        if (category === 'all' || section.dataset.category === category) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+
+        function initFAQSearch() {
+            const searchInput = document.getElementById('faqSearch');
+            const searchResults = document.getElementById('searchResults');
+            
+            searchInput.addEventListener('input', function() {
+                const query = this.value.toLowerCase().trim();
+                
+                if (query.length < 2) {
+                    searchResults.innerHTML = '';
+                    return;
+                }
+                
+                searchFAQ(query);
+            });
+        }
+
+        function searchFAQ(query = null) {
+            const searchInput = document.getElementById('faqSearch');
+            const searchResults = document.getElementById('searchResults');
+            
+            if (!query) {
+                query = searchInput.value.toLowerCase().trim();
+            }
+            
+            if (query.length < 2) {
+                searchResults.innerHTML = '';
+                return;
+            }
+            
+            const faqItems = document.querySelectorAll('.faq-item');
+            const results = [];
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(query) || answer.includes(query)) {
+                    results.push({
+                        question: item.querySelector('.faq-question h3').textContent,
+                        answer: item.querySelector('.faq-answer').textContent.substring(0, 200) + '...',
+                        element: item
+                    });
+                }
+            });
+            
+            displaySearchResults(results, query);
+        }
+
+        function displaySearchResults(results, query) {
+            const searchResults = document.getElementById('searchResults');
+            
+            if (results.length === 0) {
+                searchResults.innerHTML = '<p class="no-results">Nie znaleziono wyników dla: "' + query + '"</p>';
+                return;
+            }
+            
+            let html = '<div class="search-results-list">';
+            html += '<h3>Wyniki wyszukiwania dla: "' + query + '" (' + results.length + ')</h3>';
+            
+            results.forEach(result => {
+                html += `
+                    <div class="search-result-item" onclick="scrollToFAQItem(this)">
+                        <h4>${highlightText(result.question, query)}</h4>
+                        <p>${highlightText(result.answer, query)}</p>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            searchResults.innerHTML = html;
+        }
+
+        function highlightText(text, query) {
+            const regex = new RegExp(`(${query})`, 'gi');
+            return text.replace(regex, '<mark>$1</mark>');
+        }
+
+        function scrollToFAQItem(element) {
+            const searchResults = document.getElementById('searchResults');
+            searchResults.innerHTML = '';
+            
+            // Find the corresponding FAQ item and scroll to it
+            const faqItems = document.querySelectorAll('.faq-item');
+            const questionText = element.querySelector('h4').textContent.replace(/<[^>]*>/g, '');
+            
+            faqItems.forEach(item => {
+                if (item.querySelector('.faq-question h3').textContent === questionText) {
+                    item.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Open the FAQ item
+                    const answer = item.querySelector('.faq-answer');
+                    const icon = item.querySelector('.faq-icon');
+                    
+                    // Close all other items first
+                    document.querySelectorAll('.faq-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.faq-answer').style.display = 'none';
+                            otherItem.querySelector('.faq-icon').textContent = '+';
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Open current item
+                    answer.style.display = 'block';
+                    icon.textContent = '−';
+                    item.classList.add('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

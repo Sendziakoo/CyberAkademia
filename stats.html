@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statystyki - CyberMoc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                🛡️ CyberMoc
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="password.html">Gra Hasło</a></li>
+                    <li><a href="achievements.html">Osiągnięcia</a></li>
+                    <li><a href="stats.html" class="active">Statystyki</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">📊 Twoje Statystyki</h1>
+                <p class="page-subtitle">Analiza Twoich postępów w nauce cyberbezpieczeństwa</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-value" id="totalPoints">0</div>
+                    <div class="stat-label">Łączne Punkty</div>
+                    <div class="stat-description">Suma wszystkich zdobytych punktów</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value" id="currentLevel">1</div>
+                    <div class="stat-label">Aktualny Poziom</div>
+                    <div class="stat-description">Twój obecny poziom w systemie</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🧠</div>
+                    <div class="stat-value" id="quizScore">0</div>
+                    <div class="stat-label">Punkty z Quizu</div>
+                    <div class="stat-description">Punkty zdobyte w quizach</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔐</div>
+                    <div class="stat-value" id="passwordScore">0</div>
+                    <div class="stat-label">Punkty z Haseł</div>
+                    <div class="stat-description">Punkty za silne hasła</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-value" id="achievementsUnlocked">0</div>
+                    <div class="stat-label">Osiągnięcia</div>
+                    <div class="stat-description">Liczba odblokowanych osiągnięć</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📈</div>
+                    <div class="stat-value" id="completionRate">0%</div>
+                    <div class="stat-label">Ukończenie</div>
+                    <div class="stat-description">Procent ukończonych osiągnięć</div>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <h2 class="section-title">Postęp w Osiągnięciach</h2>
+                <div id="achievementsProgress">
+                    <!-- Progress bars will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="chart-section">
+                <h2 class="section-title">Rozkład Punktów</h2>
+                <div class="chart-container">
+                    <div class="chart-item">
+                        <div class="chart-icon">🧠</div>
+                        <div class="chart-value" id="quizPercentage">0%</div>
+                        <div class="chart-label">Quiz</div>
+                    </div>
+                    <div class="chart-item">
+                        <div class="chart-icon">🔐</div>
+                        <div class="chart-value" id="passwordPercentage">0%</div>
+                        <div class="chart-label">Hasła</div>
+                    </div>
+                    <div class="chart-item">
+                        <div class="chart-icon">🏆</div>
+                        <div class="chart-value" id="achievementPercentage">0%</div>
+                        <div class="chart-label">Osiągnięcia</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="achievements-preview">
+                <h2 class="section-title">Ostatnie Osiągnięcia</h2>
+                <div class="achievements-grid" id="recentAchievements">
+                    <!-- Recent achievements will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="export-section">
+                <h2 class="section-title">Eksport Danych</h2>
+                <p>Pobierz swoje statystyki i postępy</p>
+                <div class="export-buttons">
+                    <button class="btn" onclick="exportData('json')">📄 Eksportuj JSON</button>
+                    <button class="btn secondary" onclick="exportData('csv')">📊 Eksportuj CSV</button>
+                    <button class="btn secondary" onclick="resetData()">🗑️ Resetuj Dane</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

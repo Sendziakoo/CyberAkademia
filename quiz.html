@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Cyberbezpieczeństwa - CyberMoc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                🛡️ CyberMoc
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="quiz.html" class="active">Quiz</a></li>
+                    <li><a href="password.html">Gra Hasło</a></li>
+                    <li><a href="achievements.html">Osiągnięcia</a></li>
+                    <li><a href="stats.html">Statystyki</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="quiz-header">
+                <h1 class="quiz-title">🧠 Quiz Cyberbezpieczeństwa</h1>
+                <p class="quiz-subtitle">Sprawdź swoją wiedzę o bezpieczeństwie w sieci</p>
+            </div>
+
+            <div class="progress-info">
+                <div class="score-display">Punkty: <span id="currentScore">0</span></div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="score-display">Pytanie <span id="currentQuestion">1</span>/<span id="totalQuestions">8</span></div>
+            </div>
+
+            <div id="quizContent">
+                <div class="question-container">
+                    <div class="question-number" id="questionNumber">Pytanie 1 z 8</div>
+                    <h2 class="question-text" id="questionText">Ładowanie pytań...</h2>
+                    <div class="options-container" id="optionsContainer"></div>
+                </div>
+                <div class="quiz-controls">
+                    <button class="btn" id="nextBtn" onclick="nextQuestion()" disabled>Następne pytanie</button>
+                    <button class="btn secondary" id="restartBtn" onclick="restartQuiz()">Zacznij od nowa</button>
+                </div>
+            </div>
+
+            <div id="resultsContainer" class="results-container">
+                <h2 class="results-title">🎉 Quiz zakończony!</h2>
+                <div class="final-score" id="finalScore">0</div>
+                <p class="results-message" id="resultsMessage">Świetna robota!</p>
+                <div class="quiz-controls">
+                    <button class="btn" onclick="restartQuiz()">Spróbuj ponownie</button>
+                    <a href="index.html" class="btn secondary">Powrót do strony głównej</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

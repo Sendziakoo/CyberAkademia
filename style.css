@@ -957,6 +957,15 @@ body {
     margin-bottom: 30px;
 }
 
+.achievements-section {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 1);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(33, 150, 243, 0.1);
+    text-align: center;
+}
+
 .achievement-preview {
     text-align: center;
     padding: 20px;
@@ -992,6 +1001,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(33, 150, 243, 0.1);
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .progress-item {
@@ -1127,6 +1137,15 @@ body {
 .footer p {
     margin-bottom: 10px;
     opacity: 0.9;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 /* FAQ Styles */
@@ -1550,4 +1569,58 @@ body {
         font-size: 1.5rem;
         padding: 15px;
     }
+}
+
+/* Video Page Styles */
+.video-section {
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(33, 150, 243, 0.1);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.video-card {
+    background: rgba(33, 150, 243, 0.05);
+    border: 2px solid rgba(33, 150, 243, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(33, 150, 243, 0.2);
+}
+
+.video-wrapper iframe,
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.video-title {
+    margin-top: 15px;
+    color: #1976d2;
+    font-size: 1.2rem;
+}
+
+.video-description {
+    color: #424242;
+    margin-top: 6px;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }

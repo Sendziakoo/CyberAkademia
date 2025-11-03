@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - CyberAkademia</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Obejrzyj filmiki edukacyjne o cyberbezpieczeństwie w CyberAkademii.">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                🛡️ CyberAkademia
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Strona Główna</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="password.html">Gra Hasło</a></li>
+                    <li><a href="achievements.html">Osiągnięcia</a></li>
+                    <li><a href="stats.html">Statystyki</a></li>
+                    <li><a href="wideo.html" class="active">Galeria</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="scroll-progress" id="scrollProgress"></div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">🎬 Galeria wideo</h1>
+                <p class="page-subtitle">Nasze polecane materiały na temat cyberbezpieczeństwa</p>
+            </div>
+
+            <section class="video-section">
+                <h2 class="section-title">Nasze filmiki</h2>
+                <div class="video-grid">
+                    <article class="video-card">
+                        <div class="video-wrapper">
+                            <video controls preload="metadata" poster="thumbnails/phishing.jpg">
+                                <source src="videos/phishing.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <h3 class="video-title">Co to jest phishing?</h3>
+                        <p class="video-description">Poznaj najczęstsze techniki oszustów i naucz się je rozpoznawać.</p>
+                    </article>
+
+                    <article class="video-card">
+                            <div class="video-wrapper">
+                                <video controls preload="metadata" poster="thumbnails/strong-passwords.jpg">
+                                    <source src="videos/strong-passwords.mp4" type="video/mp4">
+                                </video>
+                        </div>
+                        <h3 class="video-title">Silne hasła w praktyce</h3>
+                        <p class="video-description">Jak tworzyć i zapamiętywać bezpieczne hasła na co dzień.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="video-section" style="margin-top: 30px;">
+                <h2 class="section-title">Polecane materiały</h2>
+                <div class="video-grid">
+                    <article class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube-nocookie.com/embed/XipdfS80jyw?rel=0" title="Hasło bezpieczne, czyli jakie?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="video-title">Hasło bezpieczne, czyli jakie?</h3>
+                        <p class="video-description">O tym, jak tworzyć bezpieczne hasła – szybki poradnik.</p>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube-nocookie.com/embed/ELieDHbPKEk?rel=0" title="5 dobrych rad, jak być bezpiecznym w sieci" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="video-title">5 dobrych rad, jak być bezpiecznym w sieci</h3>
+                        <p class="video-description">Krótkie wskazówki dotyczące bezpieczeństwa online.</p>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube-nocookie.com/embed/Bk-S2Jq1XXY?rel=0" title="Cyberhigiena – podstawowa ochrona" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="video-title">Cyberhigiena – podstawowa ochrona</h3>
+                        <p class="video-description">Co to jest cyberhigiena i jak ją stosować na co dzień.</p>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube-nocookie.com/embed/rdB1L-YzpKM?rel=0" title="Kwadrans o cyberbezpieczeństwie: co cyberbezpieczeństwo ma wspólnego ze zdrowiem?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="video-title">Kwadrans o cyberbezpieczeństwie: co ma wspólnego ze zdrowiem?</h3>
+                        <p class="video-description">Odcinek łączący temat bezpieczeństwa cyfrowego ze zdrowiem.</p>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube-nocookie.com/embed/lhRIvpkF0oE?rel=0" title="Jak chronić się przed cyberprzestępcami? Bezpieczeństwo w praktyce" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="video-title">Jak chronić się przed cyberprzestępcami? Bezpieczeństwo w praktyce</h3>
+                        <p class="video-description">Praktyczne przykłady zagrożeń i sposoby obrony.</p>
+                    </article>
+                    
+                    <article class="video-card">
+                        <div class="video-wrapper">
+                            <iframe src="https://www.youtube-nocookie.com/embed/ArphbyXGBPM?rel=0" title="Jak wyglądają najczęstsze cyberataki i jak się przed nimi obronić?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <h3 class="video-title">Jak wyglądają najczęstsze cyberataki i jak się przed nimi obronić?</h3>
+                        <p class="video-description">Omówienie typowych ataków i sposoby reagowania.</p>
+                    </article> 
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h3><a href="onas.html">🛡️ CyberAkademia</a></h3>
+            <p>Edukacja cyberbezpieczeństwa dla każdego</p>
+            <p>© 2025 CyberAkademia. Wszystkie prawa zastrzeżone</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

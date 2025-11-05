@@ -454,6 +454,46 @@ function initHeaderScroll() {
     });
 }
 
+// Mobile navigation toggle
+function initResponsiveNav() {
+    const header = document.getElementById('header');
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('primaryNav');
+
+    if (!header || !toggle || !menu) return;
+
+    const closeMenu = () => {
+        header.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+    };
+
+    const openMenu = () => {
+        header.classList.add('nav-open');
+        toggle.setAttribute('aria-expanded', 'true');
+    };
+
+    toggle.addEventListener('click', () => {
+        const isOpen = header.classList.contains('nav-open');
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    // Close when clicking a link
+    menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => closeMenu());
+    });
+
+    // Close when resizing back to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1250) {
+            closeMenu();
+        }
+    });
+}
+
 // Smooth scrolling for anchor links
 function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1102,6 +1142,7 @@ function showTab(tabName) {
 function initPage(pageType) {
     loadData();
     initHeaderScroll();
+    initResponsiveNav();
     initSmoothScrolling();
     
     switch (pageType) {

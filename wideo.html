@@ -50,22 +50,22 @@
                 <div class="video-grid">
                     <article class="video-card">
                         <div class="video-wrapper">
-                            <video controls preload="metadata" poster="thumbnails/phishing.jpg">
-                                <source src="videos/phishing.mp4" type="video/mp4">
+                            <video id="video1" controls preload="metadata" poster="Mareczek1.png" playsinline>
+                                <source src="konieccyber23.mp4" type="video/mp4">
                             </video>
                         </div>
-                        <h3 class="video-title">Co to jest phishing?</h3>
-                        <p class="video-description">Poznaj najczęstsze techniki oszustów i naucz się je rozpoznawać.</p>
+                        <h3 class="video-title">Darmowa konsola?</h3>
+                        <p class="video-description">W internecie nic nie jest darmowe.</p>
                     </article>
 
                     <article class="video-card">
                             <div class="video-wrapper">
-                                <video controls preload="metadata" poster="thumbnails/strong-passwords.jpg">
+                                <video id="video2" controls preload="metadata" poster="thumbnails/strong-passwords.jpg" playsinline>
                                     <source src="videos/strong-passwords.mp4" type="video/mp4">
                                 </video>
                         </div>
-                        <h3 class="video-title">Silne hasła w praktyce</h3>
-                        <p class="video-description">Jak tworzyć i zapamiętywać bezpieczne hasła na co dzień.</p>
+                        <h3 class="video-title">Lorem ipsum</h3>
+                        <p class="video-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
                     </article>
                 </div>
             </section>
@@ -134,6 +134,65 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Firefox audio fix - ensure audio is enabled for video elements
+        document.addEventListener('DOMContentLoaded', function() {
+            const videos = document.querySelectorAll('video');
+            
+            videos.forEach(function(video) {
+                // Ensure video is not muted
+                video.muted = false;
+                
+                // Force audio context when video is loaded
+                video.addEventListener('loadedmetadata', function() {
+                    try {
+                        if (video.audioTracks && video.audioTracks.length > 0) {
+                            video.audioTracks[0].enabled = true;
+                        }
+                    } catch (e) {
+                        // audioTracks API may not be available in all browsers
+                    }
+                });
+                
+                // Ensure audio is enabled when play starts
+                video.addEventListener('play', function() {
+                    this.muted = false;
+                    if (this.volume === 0) {
+                        this.volume = 1.0;
+                    }
+                    // Force audio track enable
+                    try {
+                        if (this.audioTracks && this.audioTracks.length > 0) {
+                            this.audioTracks[0].enabled = true;
+                        }
+                    } catch (e) {
+                        // audioTracks API may not be available
+                    }
+                });
+                
+                // Additional fix: on user interaction, ensure audio is enabled
+                video.addEventListener('click', function() {
+                    this.muted = false;
+                    if (this.volume === 0) {
+                        this.volume = 1.0;
+                    }
+                });
+                
+                // Try to enable audio when video can play
+                video.addEventListener('canplay', function() {
+                    this.muted = false;
+                });
+                
+                // Firefox-specific: Try to enable audio on loadeddata event
+                video.addEventListener('loadeddata', function() {
+                    this.muted = false;
+                    if (this.volume === 0) {
+                        this.volume = 1.0;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
 
